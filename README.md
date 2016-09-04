@@ -11,7 +11,7 @@
   > APEX is AWS Lambda management tools
 
   Follow these [Install APEX](https://github.com/apex/apex/blob/master/docs/installation.md), [Setting AWS credentials](https://github.com/apex/apex/blob/master/docs/aws-credentials.md)
-* Replace `role` attribute value in `package.json`, `function.json` with yours
+* Replace `role` attribute values in `package.json`, `function.json` with yours
 
   ```
   {
