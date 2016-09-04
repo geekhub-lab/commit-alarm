@@ -1,7 +1,7 @@
 # commit-alarm
 > You must commit! commit! commit! today.
 >
-> commit-alarm is daily commit alarm pusher
+> commit-alarm is daily commit alarm pusher to remind you to commit/coding every day.
 
 -
 
