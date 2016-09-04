@@ -3,9 +3,10 @@
 >
 > commit-alarm is daily commit alarm pusher to remind you to commit/coding every day.
 
--
+<br>
 
 ### Deploy & Run
+-
 * Install APEX and Setting the AWS credentials
   > APEX is AWS Lambda management tools
 
