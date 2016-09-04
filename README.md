@@ -3,7 +3,7 @@
 >
 > commit-alarm is daily commit alarm pusher
 
-----
+-
 
 ### Deploy & Run
 * Install APEX and Setting the AWS credentials
