@@ -1,0 +1,7 @@
+{
+    "runtime": "python",
+    "name": "push-message",
+    "description": "push commit alarm message to slack periodically",
+    "role": "arn:aws:iam::049006306372:role/service-role/commit-alarm",
+    "memory": 128
+}
