@@ -12,21 +12,24 @@
 
   Follow these [Install APEX](https://github.com/apex/apex/blob/master/docs/installation.md), [Setting AWS credentials](https://github.com/apex/apex/blob/master/docs/aws-credentials.md)
 * Replace `role` attribute values in `package.json`, `function.json` with yours
-
-  ```
-  {
-    ...
-    "role": "<your-role-arn-of-lambda>",
-    ...
-  }
-  ```
-  ```
-  {
-    ...
-    "role": "<your-role-arn-of-lambda>",
-    ...
-  }
-  ```
+  * package.json
+  
+    ```
+    {
+      ...
+      "role": "<your-role-arn-of-lambda>",
+      ...
+    }
+    ```
+  * functions/push_message/function.json
+  
+    ```
+    {
+      ...
+      "role": "<your-role-arn-of-lambda>",
+      ...
+    }
+    ```
 * Setting the simple slack configuration. Make `slack.ini` in `functions/push_message` directory and write this
 
   ```
