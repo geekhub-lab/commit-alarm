@@ -5,6 +5,6 @@
   "memory": 128,
   "timeout": 5,
   "role": "arn:aws:iam::049006306372:role/service-role/commit-alarm",
-  "environment": {}
+  "environment": {},
   "profile": "geekhub"
 }
