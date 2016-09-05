@@ -4,7 +4,7 @@
   "description": "alarming commit to slack",
   "memory": 128,
   "timeout": 5,
-  "role": "arn:aws:iam::049006306372:role/service-role/commit-alarm",
+  "role": "arn:aws:iam::648130221562:role/commit-alarm",
   "environment": {},
   "profile": "geekhub"
 }
