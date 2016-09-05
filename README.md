@@ -43,4 +43,12 @@
   ```
 * You should set trigger for scheduling using AWS CloudWatch on AWS console
 * The commit-alarm pusher send the random messages to your slack periodically! (It could often bothered you)
+* You can test it with apex
 
+  ```bash
+  apex invoke push_message
+  ```
+  
+  ![push receive](images/push_receive.png)
+
+  Oh! I'm going to commit now
