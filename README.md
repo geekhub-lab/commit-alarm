@@ -11,8 +11,18 @@
   > APEX is AWS Lambda management tools
 
   Follow these [Install APEX](https://github.com/apex/apex/blob/master/docs/installation.md), [Setting AWS credentials](https://github.com/apex/apex/blob/master/docs/aws-credentials.md)
-* Replace `role` attribute values in `package.json`, `function.json` with yours
-  * package.json
+* Modify the profile field in `project.json`
+
+  ```
+  {
+    ...
+    "profile": "<your-profile>"
+    ...
+  }
+  ```
+  But, if you want to use default profile, remove the "profile" field
+* Replace `role` attribute values in `project.json`, `function.json` with yours
+  * project.json
   
     ```
     {
