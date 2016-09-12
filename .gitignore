@@ -1,2 +1,6 @@
 slack.ini
+github.ini
+
+*.pyc
+
 .idea/
