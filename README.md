@@ -2,15 +2,33 @@
 > You must commit! commit! commit! today.
 >
 > commit-alarm is daily commit alarm pusher to remind you to commit/coding every day.
+>
+> It push the alarm message to you if there are no commits today.
 
 <br>
 
-### Deploy & Run
--
-* Install APEX and Setting the AWS credentials
-  > APEX is AWS Lambda management tools
+### Install & Setting the github, slack config
+* Run install.sh
 
-  Follow these [Install APEX](https://github.com/apex/apex/blob/master/docs/installation.md), [Setting AWS credentials](https://github.com/apex/apex/blob/master/docs/aws-credentials.md)
+    ```bash
+    ./install.sh
+    ```
+    
+    Then, you can setting the github, slack config during install
+    
+    ```
+    Slack incoming webhook : <your DM webhook>
+    Github username : <github username>
+    Github password : <github password>
+    ```
+
+<br>
+
+### Setting the aws config
+-
+* Setting the AWS credentials.
+
+  > Follow [Setting AWS credentials](https://github.com/apex/apex/blob/master/docs/aws-credentials.md)
 * Modify the profile field in `project.json`
 
   ```
@@ -40,19 +58,12 @@
       ...
     }
     ```
-* Setting the simple slack configuration. Make `slack.ini` in `functions/push_message` directory and write this
-
-  ```
-  [slack]
-  incoming_webhook_url: https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX (your slack incoming webhook url)
-  ```
 * Deploy!
 
   ```bash
   apex deploy
   ```
 * You should set trigger for scheduling using AWS CloudWatch on AWS console
-* The commit-alarm pusher send the random messages to your slack periodically! (It could often bothered you)
 * You can test it with apex
 
   ```bash
