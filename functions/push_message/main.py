@@ -2,9 +2,12 @@
 
 from ConfigParser import SafeConfigParser
 
+import datetime
 import json
 import random
 import urllib2
+
+from github import Github
 
 
 bot_name = 'commit'
@@ -27,16 +30,47 @@ def get_slack_incoming_webhook_url():
     return parser.get('slack', 'incoming_webhook_url')
 
 
+def get_github_account_info():
+    parser = SafeConfigParser()
+    parser.read('github.ini')
+
+    username = parser.get('github', 'username')
+    password = parser.get('github', 'password')
+
+    return username, password
+
+
+def get_today_commit_events(user):
+    today = datetime.datetime.today()
+    today_date = datetime.datetime(today.year, today.month, today.day)
+
+    commit_events = []
+
+    for event in user.get_events():
+        if event.created_at > today_date \
+                and event.type in ['PushEvent', 'PullRequestEvent']:
+            commit_events.append(event)
+        break  # Get first page only
+
+    return commit_events
+
+
 def handle(event, context):
     url = get_slack_incoming_webhook_url()
+    username, password = get_github_account_info()
 
-    data = {
-        'username': bot_name,
-        'text': random.choice(message_list)
-    }
-    data = json.dumps(data)
+    client = Github(username, password)
 
-    req = urllib2.Request(url, data)
-    req.add_header('Content-type', 'application/json')
+    today_commit_events = get_today_commit_events(client.get_user(username))
 
-    urllib2.urlopen(req)
+    if len(today_commit_events) == 0:
+        data = {
+            'username': bot_name,
+            'text': random.choice(message_list)
+        }
+        data = json.dumps(data)
+
+        req = urllib2.Request(url, data)
+        req.add_header('Content-type', 'application/json')
+
+        urllib2.urlopen(req)
