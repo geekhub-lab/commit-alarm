@@ -43,11 +43,12 @@ def get_github_account_info():
 def get_today_commit_events(user):
     today = datetime.datetime.today()
     today_date = datetime.datetime(today.year, today.month, today.day)
+    today_date_ko = today_date - datetime.timedelta(hours=9)
 
     commit_events = []
 
     for event in user.get_events():
-        if event.created_at > today_date \
+        if event.created_at > today_date_ko \
                 and event.type in ['PushEvent', 'PullRequestEvent']:
             commit_events.append(event)
         break  # Get first page only
