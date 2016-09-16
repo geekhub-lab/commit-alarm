@@ -78,3 +78,6 @@
   ![push receive](images/push_receive.png)
 
   Oh! I'm going to commit now
+
+### Telegram version
+[MuhunKim/DailyCommit](https://github.com/MuhunKim/DailyCommit)
