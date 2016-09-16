@@ -1,6 +1,8 @@
 # coding: utf-8
-
-from ConfigParser import SafeConfigParser
+try:
+    from ConfigParser import SafeConfigParser
+except ImportError:
+    from configparser import SafeConfigParser
 
 import datetime
 import json

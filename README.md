@@ -7,9 +7,6 @@
 
 <br>
 
-### install ConfigParser modules
-* `pip install -r requirements.txt`
-
 ### Install & Setting the github, slack config
 * Run install.sh
 
