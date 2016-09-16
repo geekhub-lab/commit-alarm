@@ -13,9 +13,9 @@
     ```bash
     ./install.sh
     ```
-    
+
     Then, you can setting the github, slack config during install
-    
+
     ```
     Slack incoming webhook : <your DM webhook>
     Github username : <github username>
@@ -25,7 +25,6 @@
 <br>
 
 ### Setting the aws config
--
 * Setting the AWS credentials.
 
   > Follow [Setting AWS credentials](https://github.com/apex/apex/blob/master/docs/aws-credentials.md)
@@ -41,7 +40,7 @@
   But, if you want to use default profile, remove the "profile" field
 * Replace `role` attribute values in `project.json`, `function.json` with yours
   * project.json
-  
+
     ```
     {
       ...
@@ -50,7 +49,7 @@
     }
     ```
   * functions/push_message/function.json
-  
+
     ```
     {
       ...
@@ -58,7 +57,7 @@
       ...
     }
     ```
-    
+
 <br>
 
 ### Deploy & Test
@@ -74,7 +73,10 @@
   ```bash
   apex invoke push_message
   ```
-  
+
   ![push receive](images/push_receive.png)
 
   Oh! I'm going to commit now
+
+### Telegram version
+[MuhunKim/DailyCommit](https://github.com/MuhunKim/DailyCommit)
