@@ -1,2 +1,1 @@
-PyGithub==1.28
 ConfigParser=3.5.0
