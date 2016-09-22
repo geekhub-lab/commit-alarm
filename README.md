@@ -78,5 +78,7 @@
 
   Oh! I'm going to commit now
 
+<br>
+
 ### Telegram version
 [MuhunKim/DailyCommit](https://github.com/MuhunKim/DailyCommit)
